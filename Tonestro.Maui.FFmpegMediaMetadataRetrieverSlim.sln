@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim", "Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.csproj", "{F4A800B4-4062-42EB-A133-FE0EC1DE71BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.UsageChecker", "Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.UsageChecker\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.UsageChecker.csproj", "{5BBF9103-F7F9-4F68-B9F6-09A04F3C411E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A800B4-4062-42EB-A133-FE0EC1DE71BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A800B4-4062-42EB-A133-FE0EC1DE71BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A800B4-4062-42EB-A133-FE0EC1DE71BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A800B4-4062-42EB-A133-FE0EC1DE71BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBF9103-F7F9-4F68-B9F6-09A04F3C411E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBF9103-F7F9-4F68-B9F6-09A04F3C411E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBF9103-F7F9-4F68-B9F6-09A04F3C411E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBF9103-F7F9-4F68-B9F6-09A04F3C411E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

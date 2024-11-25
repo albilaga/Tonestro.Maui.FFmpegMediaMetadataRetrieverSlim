@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsTrimmable>true</IsTrimmable>
+        <RootNamespace>Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim</RootNamespace>
+    </PropertyGroup>
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageId>Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim</PackageId>
+        <Version>1.0.19.1</Version>
+        <Description>Contains bindings for https://github.com/wseemann/FFmpegMediaMetadataRetriever</Description>
+        <Authors>Albilaga Linggra Pradana</Authors>
+        <Company>fun.music IT GmbH</Company>
+        <PackageOutputPath>nugetoutput</PackageOutputPath>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedAllSources>true</EmbedAllSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <NLIGradleProjectReference Include="../native/ffmpegmediametadataretrieverslim">
+            <ModuleName>FFmpegMediaMetadataRetrieverSlim</ModuleName>
+            <Bind>true</Bind>
+            <Pack>true</Pack>
+        </NLIGradleProjectReference>
+        <AndroidLibrary Include="../native/prebuildaar/*.aar">
+            <Bind>false</Bind>
+            <Pack>true</Pack>
+        </AndroidLibrary>
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidNamespaceReplacement Include='Com.Tonestro.Ffmpegmediametadataretrieverslim.FFmpegMediaMetadataRetrieverSlim' Replacement='FFmpegMediaMetadataRetrieverSlim' />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui.NativeLibraryInterop.BuildTasks" Version="0.0.1-pre1" PrivateAssets="all" />
+    </ItemGroup>
+</Project>

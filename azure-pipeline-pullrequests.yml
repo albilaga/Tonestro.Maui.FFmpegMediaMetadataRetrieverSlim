@@ -1,0 +1,57 @@
+pr:
+  - main
+
+pool:
+  vmImage: "macOS-14"
+
+steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: "sdk"
+      useGlobalJson: true
+
+  - bash: |
+      echo "##vso[build.updatebuildnumber]pullrequests-tonestro-maui-ffmpegmediametadataretrieverslim-$(Build.SourceBranchName)-$(Build.BuildId)"
+    displayName: Set Build Number
+
+  - bash: |
+      sudo dotnet workload restore
+    displayName: Restore Workloads
+
+  - bash: |
+      cd native/ffmpegmediametadataretrieverslim
+      ./gradlew build
+      cd ../..
+    displayName: Gradle Build
+
+  - bash: |
+      cd Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim
+      dotnet build -c Release
+      dotnet pack -c Release
+      cd ..
+    displayName: Build and Pack
+
+  - bash: |
+      cd Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim/nugetoutput
+      numberOfNugetFiles=$(ls *.nupkg | wc -l)
+      if [[ numberOfNugetFiles -ne 1 ]]; then
+        echo "WRONG NUMBER OF NUGET FILES: ${numberOfNugetFiles}"
+        exit 1
+      fi
+      eval $(stat -s *.nupkg)
+      if [[ $st_size -lt 1500000 ]]; then
+        echo "NUGET FILE TOO SMALL: ${st_size}"
+        exit 1
+      else
+        echo "NUGET SIZE: ${st_size}"
+      fi
+      cd ../..
+    displayName: Check nuget file
+
+  - task: PublishBuildArtifacts@1
+    displayName: publish nugetoutput
+    inputs:
+      PathtoPublish: "Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim/nugetoutput"
+      ArtifactName: "nugetoutput"
+      publishLocation: "Container"
+      StoreAsTar: true

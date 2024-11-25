@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+        <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <ApplicationId>com.companyname.Tonestro.Maui.FFMpegMediaMetadataRetrieverSlim.UsageChecker</ApplicationId>
+        <ApplicationVersion>1</ApplicationVersion>
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <RootNamespace>Tonestro.Maui.FFMpegMediaMetadataRetrieverSlim.UsageChecker</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.csproj" />
+    </ItemGroup>
+</Project>

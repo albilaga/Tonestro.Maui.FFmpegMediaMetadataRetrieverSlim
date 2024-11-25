@@ -1,0 +1,11 @@
+[versions]
+agp = "8.7.2"
+ffmpegmediametadataretrieverCore = "1.0.19"
+
+[libraries]
+ffmpegmediametadataretriever-core = { module = "com.github.wseemann:FFmpegMediaMetadataRetriever-core", version.ref = "ffmpegmediametadataretrieverCore" }
+ffmpegmediametadataretriever-native = { module = "com.github.wseemann:FFmpegMediaMetadataRetriever-native", version.ref = "ffmpegmediametadataretrieverCore" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+
