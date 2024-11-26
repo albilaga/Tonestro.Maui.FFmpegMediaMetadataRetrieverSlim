@@ -10,7 +10,7 @@
     <PropertyGroup>
         <IsPackable>true</IsPackable>
         <PackageId>Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim</PackageId>
-        <Version>1.0.19.1</Version>
+        <Version>1.0.19.2</Version>
         <Description>Contains bindings for https://github.com/wseemann/FFmpegMediaMetadataRetriever</Description>
         <Authors>Albilaga Linggra Pradana</Authors>
         <Company>fun.music IT GmbH</Company>
@@ -30,9 +30,6 @@
             <Bind>false</Bind>
             <Pack>true</Pack>
         </AndroidLibrary>
-    </ItemGroup>
-    <ItemGroup>
-        <AndroidNamespaceReplacement Include='Com.Tonestro.Ffmpegmediametadataretrieverslim.FFmpegMediaMetadataRetrieverSlim' Replacement='FFmpegMediaMetadataRetrieverSlim' />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="CommunityToolkit.Maui.NativeLibraryInterop.BuildTasks" Version="0.0.1-pre1" PrivateAssets="all" />
