@@ -9,7 +9,16 @@
         <ApplicationVersion>1</ApplicationVersion>
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
         <RootNamespace>Tonestro.Maui.FFMpegMediaMetadataRetrieverSlim.UsageChecker</RootNamespace>
+        <AndroidUseAapt2>true</AndroidUseAapt2>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <EnableProguard>true</EnableProguard>
+        <AndroidLinkTool>r8</AndroidLinkTool>
+        <AndroidDexTool>d8</AndroidDexTool>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProguardConfiguration Include="proguard.cfg" />
+    </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim\Tonestro.Maui.FFmpegMediaMetadataRetrieverSlim.csproj" />
     </ItemGroup>
